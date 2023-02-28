@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+	padding: 5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.team {
+	border: 1px solid black;
+	grid-column: 1/2;
+	margin-right: 5rem;
+	background-color: aqua;
+
+	&__box {
+		height: 700px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding: 2rem;
+
+		&-player {
+			width: 100%;
+			margin: 1rem;
+			padding: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			border: 1px solid black;
+		}
+	}
+}
+
+.pitch {
+	height: 500px;
+	border: 1px solid black;
+	grid-column: 2/4;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	&__field {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border: 1px solid black;
+	}
+}
